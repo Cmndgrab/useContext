@@ -18,17 +18,22 @@ export default function MyApp() {
             setTheme(e.target.checked ? 'dark' : 'light')
           }}
         />
-        Use dark mode
+        Use non Ugly mode
       </label>
     </ThemeContext.Provider>
   )
 }
 
 function Form({ children }) {
+  const theme = useContext(ThemeContext)
+  const className = 'p-' + theme;
   return (
-    <Panel title="Welcome">
+    <Panel title="useContext!">
+      <p>Open the console and see what happens when you push the ugly mode button!!!!</p>
       <Button>Sign up</Button>
       <Button>Log in</Button>
+      <p className={className}> notice that the class-names for the elements are changing dynaically because of the change to state and context!</p>
+      <p> Even the font on the above text is changing!!!!</p>
     </Panel>
   );
 }
