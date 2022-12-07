@@ -34,6 +34,7 @@ function Form({ children }) {
       <Button>Log in</Button>
       <p className={className}> notice that the class-names for the elements are changing dynaically because of the change to state and context!</p>
       <p> Even the font on the above text is changing!!!!</p>
+      <p>try changing some of the css or adding className context to some of these other elements! or even add your own elements entirely!</p>
     </Panel>
   );
 }
